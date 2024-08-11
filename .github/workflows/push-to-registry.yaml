@@ -42,7 +42,7 @@ jobs:
         run: |
           echo "REPO_LC=${REPO,,}" >>${GITHUB_ENV}
         env:
-          REPO: '${{ github.repository_owner }}'
+          REPO: '${{ github.repository }}'
       -
         name: Build and push
         uses: docker/build-push-action@v6
