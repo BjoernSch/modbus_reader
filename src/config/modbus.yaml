@@ -1,0 +1,18 @@
+verteilung:
+    type: tcp
+    host: 192.168.50.164
+    port: 8899
+    interval: 5
+    units:
+      lueftung:
+         address: 1
+         type: or-we-515
+      carport:
+         address: 2
+         type: or-we-517
+      waermepumpe:
+         address: 3
+         type: or-we-517
+      haus:
+         address: 4
+         type: or-we-517

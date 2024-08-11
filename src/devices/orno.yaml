@@ -1,0 +1,1104 @@
+or-we-514:
+  - name: frequency
+    address: 0x130
+    length: 1
+    type: uint
+    unit: Hz
+    multiplicator: 0.01
+    fetch: False
+  - name: voltage_l1
+    address: 0x131
+    length: 1
+    type: uint
+    unit: V
+    multiplicator: 0.01
+    fetch: False
+  - name: current_l1
+    address: 0x139
+    length: 2
+    type: uint
+    unit: A
+    multiplicator: 0.001
+    fetch: False
+  - name: power_l1
+    address: 0x140
+    length: 2
+    type: uint
+    unit: W
+    multiplicator: 1
+    fetch: True
+  - name: power_reactive_l1
+    address: 0x148
+    length: 2
+    type: uint
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x150
+    length: 2
+    type: uint
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x158
+    length: 1
+    type: uint
+    unit: 
+    multiplicator: 0.001
+    fetch: False
+  - name: energy_forward_sum
+    address: 0xa000
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: True
+  - name: energy_forward_reactive_sum
+    address: 0xa01e
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+or-we-515:
+  - name: frequency
+    address: 0x130
+    length: 1
+    type: uint
+    unit: Hz
+    multiplicator: 0.01
+    fetch: False
+  - name: voltage_l1
+    address: 0x131
+    length: 1
+    type: uint
+    unit: V
+    multiplicator: 0.01
+    fetch: False
+  - name: current_l1
+    address: 0x139
+    length: 2
+    type: uint
+    unit: A
+    multiplicator: 0.001
+    fetch: False
+  - name: power_l1
+    address: 0x140
+    length: 2
+    type: uint
+    unit: W
+    multiplicator: 1
+    fetch: True
+  - name: power_reactive_l1
+    address: 0x148
+    length: 2
+    type: uint
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x150
+    length: 2
+    type: uint
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x158
+    length: 1
+    type: uint
+    unit: 
+    multiplicator: 0.001
+    fetch: False
+  - name: energy_forward_sum
+    address: 0xa000
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: True
+  - name: energy_forward_t1
+    address: 0xa002
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_t2
+    address: 0xa004
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_t3
+    address: 0xa006
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_t4
+    address: 0xa008
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_sum
+    address: 0xa01e
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_t1
+    address: 0xa020
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_t2
+    address: 0xa022
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_t3
+    address: 0xa024
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_t4
+    address: 0xa026
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+or-we-516:
+  - name: voltage_l1
+    address: 0xe
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l2
+    address: 0x10
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l3
+    address: 0x12
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: frequency
+    address: 0x14
+    length: 2
+    type: float
+    unit: Hz
+    multiplicator: 1
+    fetch: False
+  - name: current_l1
+    address: 0x16
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: current_l2
+    address: 0x18
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: current_l3
+    address: 0x1a
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: power_sum
+    address: 0x1c
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l1
+    address: 0x1e
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l2
+    address: 0x20
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l3
+    address: 0x22
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_reactive_sum
+    address: 0x24
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l1
+    address: 0x26
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l2
+    address: 0x28
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l3
+    address: 0x2a
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_sum
+    address: 0x2c
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x2e
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l2
+    address: 0x30
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l3
+    address: 0x32
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: powerfactor_sum
+    address: 0x34
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x36
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l2
+    address: 0x38
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l3
+    address: 0x3a
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_sum
+    address: 0x100
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_total_l1
+    address: 0x102
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_l2
+    address: 0x104
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_l3
+    address: 0x106
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_sum
+    address: 0x108
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_forward_l1
+    address: 0x10a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_l2
+    address: 0x10c
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_l3
+    address: 0x10e
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_sum
+    address: 0x110
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_reverse_l1
+    address: 0x112
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_l2
+    address: 0x114
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_l3
+    address: 0x116
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_sum
+    address: 0x118
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l1
+    address: 0x11a
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l2
+    address: 0x11c
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l3
+    address: 0x11e
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_sum
+    address: 0x120
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l1
+    address: 0x122
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l2
+    address: 0x124
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l3
+    address: 0x126
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_sum
+    address: 0x128
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l1
+    address: 0x12a
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l2
+    address: 0x12c
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l3
+    address: 0x12e
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+or-we-517:
+  - name: voltage_l1
+    address: 0xe
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l2
+    address: 0x10
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l3
+    address: 0x12
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: frequency
+    address: 0x14
+    length: 2
+    type: float
+    unit: Hz
+    multiplicator: 1
+    fetch: False
+  - name: current_l1
+    address: 0x16
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: current_l2
+    address: 0x18
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: current_l3
+    address: 0x1a
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: power_sum
+    address: 0x1c
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l1
+    address: 0x1e
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l2
+    address: 0x20
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_l3
+    address: 0x22
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1000
+    fetch: True
+  - name: power_reactive_sum
+    address: 0x24
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l1
+    address: 0x26
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l2
+    address: 0x28
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_reactive_l3
+    address: 0x2a
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_sum
+    address: 0x2c
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x2e
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x30
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: power_apparent_l1
+    address: 0x32
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1000
+    fetch: False
+  - name: powerfactor_sum
+    address: 0x34
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x36
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l2
+    address: 0x38
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l3
+    address: 0x3a
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_sum
+    address: 0x100
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_total_l1
+    address: 0x102
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_l2
+    address: 0x104
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_l3
+    address: 0x106
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_sum
+    address: 0x108
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_forward_l1
+    address: 0x10a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_l2
+    address: 0x10c
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_l3
+    address: 0x10e
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_sum
+    address: 0x110
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_reverse_l1
+    address: 0x112
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_l2
+    address: 0x114
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_l3
+    address: 0x116
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_sum
+    address: 0x118
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l1
+    address: 0x11a
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l2
+    address: 0x11c
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reactive_l3
+    address: 0x11e
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_sum
+    address: 0x120
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l1
+    address: 0x122
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l2
+    address: 0x124
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_l3
+    address: 0x126
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_sum
+    address: 0x128
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l1
+    address: 0x12a
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l2
+    address: 0x12c
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_l3
+    address: 0x12e
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_t1
+    address: 0x130
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_t1
+    address: 0x132
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_t1
+    address: 0x134
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_reactive_t1
+    address: 0x136
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_t1
+    address: 0x138
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_t1
+    address: 0x13a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_t2
+    address: 0x13c
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_t2
+    address: 0x13e
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_t2
+    address: 0x140
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_reactive_t2
+    address: 0x142
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_t2
+    address: 0x144
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_t2
+    address: 0x146
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_t3
+    address: 0x148
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_t3
+    address: 0x14a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_t3
+    address: 0x14c
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_reactive_t3
+    address: 0x14e
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_t3
+    address: 0x150
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_t3
+    address: 0x152
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_t4
+    address: 0x154
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_t4
+    address: 0x156
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_t4
+    address: 0x158
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_reactive_t4
+    address: 0x15a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_reactive_t4
+    address: 0x15c
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_reverse_reactive_t4
+    address: 0x15e
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+or-we-524:
+  - name: voltage_l1
+    address: 0x100
+    length: 2
+    type: uint
+    unit: V
+    multiplicator: 0.001
+    fetch: False
+  - name: current_l1
+    address: 0x102
+    length: 2
+    type: uint
+    unit: A
+    multiplicator: 0.001
+    fetch: False
+  - name: power_l1
+    address: 0x104
+    length: 2
+    type: uint
+    unit: W
+    multiplicator: 1
+    fetch: True
+  - name: power_apparent_l1
+    address: 0x106
+    length: 2
+    type: uint
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: power_reactive_l1
+    address: 0x108
+    length: 2
+    type: uint
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: frequency
+    address: 0x10a
+    length: 1
+    type: uint
+    unit: Hz
+    multiplicator: 0.1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x10b
+    length: 1
+    type: uint
+    unit: 
+    multiplicator: 0.001
+    fetch: False
+  - name: energy_forward_sum
+    address: 0x010e
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: True
+  - name: energy_reverse_sum
+    address: 0x0118
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: True
+  - name: energy_total_sum
+    address: 0x0122
+    length: 2
+    type: uint
+    unit: kWh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_forward_reactive_sum
+    address: 0x12c
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_reverse_reactive_sum
+    address: 0x136
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False
+  - name: energy_total_reactive_sum
+    address: 0x140
+    length: 2
+    type: uint
+    unit: kVArh
+    multiplicator: 0.01
+    fetch: False

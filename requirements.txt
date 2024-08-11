@@ -1,0 +1,6 @@
+influxdb
+pyserial
+requests
+paho-mqtt
+yaml
+pymodbus
