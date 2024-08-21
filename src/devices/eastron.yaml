@@ -1,0 +1,295 @@
+sdm72d-m-2:
+  - name: voltage_l1
+    address: 0x0000
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l2
+    address: 0x0002
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l3
+    address: 0x0004
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: current_l1
+    address: 0x0006
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: True
+  - name: current_l2
+    address: 0x0008
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: True
+  - name: current_l3
+    address: 0x000a
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: True
+  - name: power_active_l1
+    address: 0x000c
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: True
+  - name: power_active_l2
+    address: 0x000e
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: True
+  - name: power_active_l3
+    address: 0x0010
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: True
+  - name: power_apparent_l1
+    address: 0x0012
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: power_apparent_l2
+    address: 0x0014
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: power_apparent_l3
+    address: 0x0016
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: power_reactive_l1
+    address: 0x0018
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: power_reactive_l2
+    address: 0x001a
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: power_reactive_l3
+    address: 0x001c
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l1
+    address: 0x001e
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l2
+    address: 0x0020
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_l3
+    address: 0x0022
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: voltage_avg
+    address: 0x002a
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: current_avg
+    address: 0x002e
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: current_sum
+    address: 0x0030
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: False
+  - name: power_active_sum
+    address: 0x0034
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1
+    fetch: True
+  - name: power_apparent_sum
+    address: 0x0038
+    length: 2
+    type: float
+    unit: VA
+    multiplicator: 1
+    fetch: False
+  - name: power_reactive_sum
+    address: 0x003c
+    length: 2
+    type: float
+    unit: VAr
+    multiplicator: 1
+    fetch: False
+  - name: powerfactor_sum
+    address: 0x003e
+    length: 2
+    type: float
+    unit: 
+    multiplicator: 1
+    fetch: False
+  - name: frequency
+    address: 0x0046
+    length: 2
+    type: float
+    unit: Hz
+    multiplicator: 1
+    fetch: False
+  - name: energy_forward_sum
+    address: 0x0048
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_reverse_sum
+    address: 0x004a
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: voltage_l1_l2
+    address: 0x00c8
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l2_l3
+    address: 0x00ca
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_l3_l1
+    address: 0x00cc
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: voltage_avg_l_l
+    address: 0x00cc
+    length: 2
+    type: float
+    unit: V
+    multiplicator: 1
+    fetch: False
+  - name: current_n
+    address: 0x00e0
+    length: 2
+    type: float
+    unit: A
+    multiplicator: 1
+    fetch: True
+  - name: energy_total_active_sum
+    address: 0x0156
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: energy_total_reactive_sum
+    address: 0x0158
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_active_resettable_sum
+    address: 0x0180
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_total_reactive_resettable_sum
+    address: 0x0182
+    length: 2
+    type: float
+    unit: kVArh
+    multiplicator: 1
+    fetch: False
+  - name: energy_import_active_resettable_sum
+    address: 0x0184
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_export_active_resettable_sum
+    address: 0x0186
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: False
+  - name: energy_netted_active_sum
+    address: 0x0156
+    length: 2
+    type: float
+    unit: kWh
+    multiplicator: 1
+    fetch: True
+  - name: power_import_active_sum
+    address: 0x0500
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1
+    fetch: False
+  - name: power_export_active_sum
+    address: 0x0502
+    length: 2
+    type: float
+    unit: W
+    multiplicator: 1
+    fetch: False

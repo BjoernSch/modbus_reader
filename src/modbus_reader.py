@@ -126,7 +126,7 @@ if __name__ == "__main__":
         mqtt_port = int(os.getenv('MQTT_PORT', '1883')) 
         mqtt_username = os.getenv('MQTT_USER')
         mqtt_password = os.getenv('MQTT_PASSWORD')
-        mqtt_topic = os.getenv('MQTT_TOPIC', 'meter')
+        mqtt_topic = os.getenv('MQTT_TOPIC', 'modbus_reader')
 
         mqttc = mqtt_client.Client(mqtt_client.CallbackAPIVersion.VERSION2)
         mqttc.on_connect = mqtt_on_connect

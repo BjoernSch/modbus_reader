@@ -20,7 +20,7 @@ or-we-514:
     unit: A
     multiplicator: 0.001
     fetch: False
-  - name: power_l1
+  - name: power_active_l1
     address: 0x140
     length: 2
     type: uint
@@ -48,7 +48,7 @@ or-we-514:
     unit: 
     multiplicator: 0.001
     fetch: False
-  - name: energy_forward_sum
+  - name: energy_forward_active_sum
     address: 0xa000
     length: 2
     type: uint
@@ -84,7 +84,7 @@ or-we-515:
     unit: A
     multiplicator: 0.001
     fetch: False
-  - name: power_l1
+  - name: power_active_l1
     address: 0x140
     length: 2
     type: uint
@@ -112,35 +112,35 @@ or-we-515:
     unit: 
     multiplicator: 0.001
     fetch: False
-  - name: energy_forward_sum
+  - name: energy_forward_active_sum
     address: 0xa000
     length: 2
     type: uint
     unit: kWh
     multiplicator: 0.01
     fetch: True
-  - name: energy_forward_t1
+  - name: energy_forward_active_t1
     address: 0xa002
     length: 2
     type: uint
     unit: kWh
     multiplicator: 0.01
     fetch: False
-  - name: energy_forward_t2
+  - name: energy_forward_active_t2
     address: 0xa004
     length: 2
     type: uint
     unit: kWh
     multiplicator: 0.01
     fetch: False
-  - name: energy_forward_t3
+  - name: energy_forward_active_t3
     address: 0xa006
     length: 2
     type: uint
     unit: kWh
     multiplicator: 0.01
     fetch: False
-  - name: energy_forward_t4
+  - name: energy_forward_active_t4
     address: 0xa008
     length: 2
     type: uint
@@ -232,28 +232,28 @@ or-we-516:
     unit: A
     multiplicator: 1
     fetch: False
-  - name: power_sum
+  - name: power_active_sum
     address: 0x1c
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l1
+  - name: power_active_l1
     address: 0x1e
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l2
+  - name: power_active_l2
     address: 0x20
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l3
+  - name: power_active_l3
     address: 0x22
     length: 2
     type: float
@@ -344,84 +344,84 @@ or-we-516:
     unit: 
     multiplicator: 1
     fetch: False
-  - name: energy_total_sum
+  - name: energy_total_active_sum
     address: 0x100
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_total_l1
+  - name: energy_total_active_l1
     address: 0x102
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_total_l2
+  - name: energy_total_active_l2
     address: 0x104
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_total_l3
+  - name: energy_total_active_l3
     address: 0x106
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_sum
+  - name: energy_forward_active_sum
     address: 0x108
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_forward_l1
+  - name: energy_forward_active_l1
     address: 0x10a
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_l2
+  - name: energy_forward_active_l2
     address: 0x10c
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_l3
+  - name: energy_forward_active_l3
     address: 0x10e
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_sum
+  - name: energy_reverse_active_sum
     address: 0x110
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_reverse_l1
+  - name: energy_reverse_active_l1
     address: 0x112
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_l2
+  - name: energy_reverse_active_l2
     address: 0x114
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_l3
+  - name: energy_reverse_active_l3
     address: 0x116
     length: 2
     type: float
@@ -562,28 +562,28 @@ or-we-517:
     unit: A
     multiplicator: 1
     fetch: False
-  - name: power_sum
+  - name: power_active_sum
     address: 0x1c
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l1
+  - name: power_active_l1
     address: 0x1e
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l2
+  - name: power_active_l2
     address: 0x20
     length: 2
     type: float
     unit: W
     multiplicator: 1000
     fetch: True
-  - name: power_l3
+  - name: power_active_l3
     address: 0x22
     length: 2
     type: float
@@ -632,14 +632,14 @@ or-we-517:
     unit: VA
     multiplicator: 1000
     fetch: False
-  - name: power_apparent_l1
+  - name: power_apparent_l2
     address: 0x30
     length: 2
     type: float
     unit: VA
     multiplicator: 1000
     fetch: False
-  - name: power_apparent_l1
+  - name: power_apparent_l3
     address: 0x32
     length: 2
     type: float
@@ -674,84 +674,84 @@ or-we-517:
     unit: 
     multiplicator: 1
     fetch: False
-  - name: energy_total_sum
+  - name: energy_total_active_sum
     address: 0x100
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_total_l1
+  - name: energy_total_active_l1
     address: 0x102
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_total_l2
+  - name: energy_total_active_l2
     address: 0x104
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_total_l3
+  - name: energy_total_active_l3
     address: 0x106
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_sum
+  - name: energy_forward_active_sum
     address: 0x108
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_forward_l1
+  - name: energy_forward_active_l1
     address: 0x10a
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_l2
+  - name: energy_forward_active_l2
     address: 0x10c
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_l3
+  - name: energy_forward_active_l3
     address: 0x10e
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_sum
+  - name: energy_reverse_active_sum
     address: 0x110
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: True
-  - name: energy_reverse_l1
+  - name: energy_reverse_active_l1
     address: 0x112
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_l2
+  - name: energy_reverse_active_l2
     address: 0x114
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_l3
+  - name: energy_reverse_active_l3
     address: 0x116
     length: 2
     type: float
@@ -842,21 +842,21 @@ or-we-517:
     unit: kVArh
     multiplicator: 1
     fetch: False
-  - name: energy_total_t1
+  - name: energy_total_active_t1
     address: 0x130
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_forward_t1
+  - name: energy_forward_active_t1
     address: 0x132
     length: 2
     type: float
     unit: kWh
     multiplicator: 1
     fetch: False
-  - name: energy_reverse_t1
+  - name: energy_reverse_active_t1
     address: 0x134
     length: 2
     type: float
@@ -1025,7 +1025,7 @@ or-we-524:
     unit: A
     multiplicator: 0.001
     fetch: False
-  - name: power_l1
+  - name: power_active_l1
     address: 0x104
     length: 2
     type: uint
