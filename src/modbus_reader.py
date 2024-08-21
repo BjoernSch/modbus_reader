@@ -69,10 +69,10 @@ class ModbusReader(threading.Thread):
                             self.logger.error(f"Modbus Exception: {e} on bus {self.name}, device {unit_name}, register {register['name']}")
                             continue
                         if result.isError():
-                            self.logger(f"Received Modbus library error({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
+                            self.logger.error(f"Received Modbus library error({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
                             continue
                         if isinstance(result, ExceptionResponse):
-                            print(f"Received Modbus library exception ({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
+                            self.logger.error(f"Received Modbus library exception ({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
                             continue
                             # THIS IS NOT A PYTHON EXCEPTION, but a valid modbus message
 
