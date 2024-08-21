@@ -15,7 +15,8 @@ from enum import Enum
 import paho.mqtt.client as mqtt_client
 from pymodbus.client import ModbusTcpClient
 from pymodbus.client import ModbusSerialClient
-from pymodbus.exceptions import ModbusIOException
+from pymodbus  import ModbusException
+from pymodbus import ExceptionResponse
 
 import yaml
 import numbers
@@ -50,6 +51,7 @@ class ModbusReader(threading.Thread):
             exit(255)
         client.connect()
         self.client=client
+        self.logger = logging.getLogger()
 
     def run(self):
         start = False
@@ -62,31 +64,38 @@ class ModbusReader(threading.Thread):
                 for register in self.modbus_devices[unit['type']]:
                     if register['fetch']:
                         try:
-                            registers = self.client.read_holding_registers(register['address'], register['length'], unit['address']).registers
-                        except ModbusIOException as e:
-                            logging.error(f"Modbus IO Exception: {e} on bus {self.name}, device {unit_name}, register {register['name']}")
+                            result = self.client.read_holding_registers(register['address'], register['length'], unit['address'])
+                        except ModbusException as e:
+                            self.logger.error(f"Modbus Exception: {e} on bus {self.name}, device {unit_name}, register {register['name']}")
                             continue
+                        if result.isError():
+                            self.logger(f"Received Modbus library error({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
+                            continue
+                        if isinstance(result, ExceptionResponse):
+                            print(f"Received Modbus library exception ({result}) on bus {self.name}, device {unit_name}, register {register['name']}")
+                            continue
+                            # THIS IS NOT A PYTHON EXCEPTION, but a valid modbus message
 
                         if (register['length'] == 1 and register['type'] == 'uint'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.UINT16)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.UINT16)
                         elif (register['length'] == 2 and register['type'] == 'uint'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.UINT32)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.UINT32)
                         elif (register['length'] == 4 and register['type'] == 'uint'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.UINT64)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.UINT64)
                         elif (register['length'] == 1 and register['type'] == 'int'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.INT16)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.INT16)
                         elif (register['length'] == 2 and register['type'] == 'int'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.INT32)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.INT32)
                         elif (register['length'] == 4 and register['type'] == 'int'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.INT64)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.INT64)
                         elif (register['length'] == 2 and register['type'] == 'float'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.FLOAT32)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.FLOAT32)
                         elif (register['length'] == 4 and register['type'] == 'float'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.FLOAT64)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.FLOAT64)
                         elif (register['type'] == 'string'):
-                            value = self.client.convert_from_registers(registers, self.client.DATATYPE.STRING)
+                            value = self.client.convert_from_registers(result.registers, self.client.DATATYPE.STRING)
                         else:
-                            logging.error(f"Unknown data type: length {register['length']}, type {register['type']} in device type {unit['type']}, register {register['address']}")
+                            logging.error(f"Unknown data type: length {result.register['length']}, type {register['type']} in device type {unit['type']}, register {register['address']}")
                             continue
 
                         if isinstance(value, numbers.Number):
