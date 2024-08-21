@@ -64,7 +64,10 @@ class ModbusReader(threading.Thread):
                 for register in self.modbus_devices[unit['type']]:
                     if register['fetch']:
                         try:
-                            result = self.client.read_holding_registers(register['address'], register['length'], unit['address'])
+                            if unit['type'] == 'sdm72d-m-2':
+                                result = self.client.read_input_registers(register['address'], register['length'], unit['address'])
+                            else:
+                                result = self.client.read_holding_registers(register['address'], register['length'], unit['address'])
                         except ModbusException as e:
                             self.logger.error(f"Modbus Exception: {e} on bus {self.name}, device {unit_name}, register {register['name']}")
                             continue
@@ -103,7 +106,7 @@ class ModbusReader(threading.Thread):
                         
                         data[register['name']] = value
 
-                if self.influxc:
+                if self.influxc and data:
                     points += [{
                         "measurement": self.name + "." + unit_name,
                         "fields": data,
