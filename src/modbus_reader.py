@@ -15,6 +15,8 @@ from enum import Enum
 import paho.mqtt.client as mqtt_client
 from pymodbus.client import ModbusTcpClient
 from pymodbus.client import ModbusSerialClient
+from pymodbus.exceptions import ModbusIOException
+
 import yaml
 import numbers
 import time
@@ -41,7 +43,7 @@ class ModbusReader(threading.Thread):
                 port=bus['port'],
                 baudrate=bus.setdefault('baudrate', 9600),
                 bytesize=bus.setdefault('bytesize', 8),
-                parity=bus.setdefault('parity', 'E'),
+                parity=bus.setdefault('parity', 'N'),
                 stopbits=bus.setdefault('stopbits', 1))
         else:
             logging.fatal('Invalid bus type')
@@ -59,7 +61,12 @@ class ModbusReader(threading.Thread):
                 data = dict()
                 for register in self.modbus_devices[unit['type']]:
                     if register['fetch']:
-                        registers = self.client.read_holding_registers(register['address'], register['length'], unit['address']).registers
+                        try:
+                            registers = self.client.read_holding_registers(register['address'], register['length'], unit['address']).registers
+                        except ModbusIOException as e:
+                            logging.error(f"Modbus IO Exception: {e} on bus {self.name}, device {unit_name}, register {register['name']}")
+                            continue
+
                         if (register['length'] == 1 and register['type'] == 'uint'):
                             value = self.client.convert_from_registers(registers, self.client.DATATYPE.UINT16)
                         elif (register['length'] == 2 and register['type'] == 'uint'):
@@ -80,7 +87,8 @@ class ModbusReader(threading.Thread):
                             value = self.client.convert_from_registers(registers, self.client.DATATYPE.STRING)
                         else:
                             logging.error(f"Unknown data type: length {register['length']}, type {register['type']} in device type {unit['type']}, register {register['address']}")
-                        
+                            continue
+
                         if isinstance(value, numbers.Number):
                             value = register['multiplicator'] * value
                         

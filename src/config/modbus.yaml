@@ -9,7 +9,7 @@ verteilung:
          type: or-we-515
       carport:
          address: 2
-         type: or-we-517
+         type: sdm72d-m-2
       waermepumpe:
          address: 3
          type: or-we-517
