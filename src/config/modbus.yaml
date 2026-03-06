@@ -1,6 +1,6 @@
 verteilung:
     type: tcp
-    host: 192.168.50.164
+    host: eport-pe11.fritz.box
     port: 8899
     interval: 5
     units:
